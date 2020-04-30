@@ -14,7 +14,7 @@ def new_user(usersocket, adress):
         if (mensagem.rstrip() == 'FIM'):
             print('User %s:%s desconectado' % adress)
             break
-        print('[%s:%s] -> %s' % (adress[0], adress[1], mensagem.strip()))
+        print('[%s:%s] -> %s' % (adress[0], adress[1], mensagem.rstrip()))
         
         result = '> Mensagem Enviada'
         usersocket.sendall(result.encode('utf-8'))
@@ -27,8 +27,10 @@ s.listen()
 print('Aguardando conexão na porta %s...' % port)
 
 while True:
+    
     connection, adress = s.accept()
 
     print('User %s:%s' % adress)
     Thread(target=new_user, args=(connection, adress)).start()
+
 s.close()

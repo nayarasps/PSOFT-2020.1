@@ -13,15 +13,16 @@ def new_user(usersocket, adress):
     while True:
         mensagem = usersocket.recv(1024).decode('utf-8')
         
-        msg = '[%s:%s] -> %s' % (adress[0], adress[1], mensagem.strip())
+        msg = '[%s:%s] -> %s' % (adress[0], adress[1], mensagem.rstrip())
         bye = 'User %s:%s desconectado' % adress
 
-        if (mensagem.rstrip() == 'BYE'):   
+        if (mensagem.rstrip() == 'BYE'):  
+            
             print(bye)
             for user in users:
                 if user != usersocket:
                     user.send(bye.encode('utf-8'))
-            users.remove(usersocket)
+            users.remove(usersocket) 
             break
        
         print(msg)
@@ -43,4 +44,5 @@ while True:
 
     print('User %s:%s se conectou' % adress)
     Thread(target=new_user, args=(connection, adress)).start()
+    
 s.close()

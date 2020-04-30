@@ -23,7 +23,7 @@ with socket.socket() as s:
             
                 if (mensagem == 'FIM\n'): break
             
-                print('[%s:%s] ' % (adress[0], adress[1], mensagem.strip()))
+                print("[%s:%s] -> %s" % (adress[0], adress[1], mensagem.rstrip()))
             
                 result = '> Mensagem Enviada\n'
                 connection.sendall(result.encode('utf-8'))
