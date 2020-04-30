@@ -2,4 +2,5 @@
 Repositório contendo os exercícios da disciplina Projeto de Software-UFCG
 
 ## Exercícios
--[Exercicios envolvendo TCP-IP](https://github.com/nayarasps/PSOFT-2020.1/tree/master/TCP-IP)
+- Exercícios envolvendo TCP-IP
+  - Arquivos - [Link](https://github.com/nayarasps/PSOFT-2020.1/tree/master/TCP-IP)
