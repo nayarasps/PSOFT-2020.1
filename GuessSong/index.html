@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+    <meta charset="utf-8">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Adivinhe a Musica</title>
+  </head>
+
+  <body>
+
+      <header>
+        <h1> Adivinhe a Música </h1>
+        <p> Tente adivinhar a musica apartir de pequenos trechos dela</p>
+      </header>
+
+      <div id='regras'>
+        <p>Instruções:</p>
+        <ul>
+          <li>Existe um limite de trechos da música dados</li>
+          <li>A entrada não é sensivel a letras maiúsculas ou minúsculas</li>
+          <li>A entrada é sensivel à acentuação</li>
+        </ul>
+
+        <p>Vamos começar?</p>
+        <button onclick="getData()">Iniciar Jogo</button>
+      </div>
+
+      <main id='main' hidden>
+        <div id='dicas'>
+          <p id='dica1'></p>
+          
+        </div>
+        <button id='gerarDicas'>Mostrar Dica</button>
+        <input id='resposta'/>
+        <button id='submit' >Responder</button>
+        <p id='resultado' hidden></p>
+
+      </main>
+
+    <script src="app.js"></script>
+
+    <footer>Made by Nayara Souza</footer>
+  </body>
+</html>
