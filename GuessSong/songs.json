@@ -1,5 +1,4 @@
-var songs = {
-  "tracks" : [
+{"songs" : [
   {"titulo":"Don't Start Now","trechos":["Did a full 180, crazy","Did the heartbreak change me? Maybe","If you don't wanna see me dancing with somebody","Don't start caring about me now","Don't show up, don't come out"]},
   {"titulo":"Tudo No Sigilo","trechos":["Ela viaja nos maloca, os cara que é do corre","Vai rolar festinha, brota que o bonde tá forte","Ela é da zona sul, eu sou da zona norte","Se acionar a tropa, vai rolar resenha","Na onda do lança tu bota e não cansa"]},
   {"titulo":"Liberdade Provisória","trechos":["Terminou tá terminado","E eu implorei pra voltar","O ciúme não tava batendo tava dando porrada", "Vai ter que me aceitar de volta","Não me manda embora"]},
