@@ -1,6 +1,8 @@
 # @author Nayara Souza - 118110390 - UFCG
 # coding:utf-8
 
+# Client para o serverMultiChat
+
 import socket
 from threading import Thread
 
