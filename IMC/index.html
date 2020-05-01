@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+      <!-- Meta tags -->
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="style.css">
+        
+    <title>IMC</title>
+  </head>
+
+  <body>
+
+      <header>
+        <h1>Calcula IMC</h1>
+      </header>
+
+      <form>
+        <label for="altura">Altura(cm)</label>
+        <input type="text" id="altura"/>
+
+        <label for="peso">Peso(kg)</label>
+        <input type="text" id="peso"/>
+      </form>
+     
+      <button type="button" id="botao" onclick="mostraResultado()">Calcular</button>
+
+      <p class="resultado" id="resultado"></p>
+      <p class="classificacao" id="classificacao"></p>
+
+    <script src="app.js"></script>
+
+    <footer>Made by Nayara Souza</footer>
+  </body>
+</html>
