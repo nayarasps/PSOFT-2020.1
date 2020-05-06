@@ -1,60 +1,97 @@
-let positionSong = Math.floor(Math.random() * 16);
-let count = 1;
+let song,
+    currentSong,
+    indice,
+    count = 1,
+    $inputResultado = document.getElementById('resposta'),
+    $outputResultado = document.getElementById('resultado'),
+    $primeiraDica = document.getElementById('dica1'),
+    $main = document.getElementById('main'),
+    $regras = document.getElementById('regras'),
+    $buttonSubmit = document.getElementById('submit'),
+    $buttonDica = document.getElementById('gerarDicas'),
+    $marcaPontos = document.getElementById('pontos'),
+    $divDicas = document.getElementById('dicas');
 
 function getData(){
     fetch('https://raw.githubusercontent.com/nayarasps/PSOFT-2020.1/master/GuessSong/songs.json')
     .then(response => response.json())
-    .then(data => iniciaJogo(data.songs[positionSong]))
-    .catch(err => console.error('Falha em conseguir informações', err))
+    .then(data => {
+        song = data;
+        geraInformacaoInicial();
+    })
+    .catch(erro => console.error('Falha em conseguir informações', erro))
 }
 
-function mostrarDicas(data) {
-    console.log('opa');
-    count += 1;
-    let dicas = data.trechos;
+function geraInformacaoInicial() {
+    indice = Math.floor(Math.random() * song.songs.length);
+    currentSong = song.songs[indice];
+    $primeiraDica.innerText = '\"' + currentSong.trechos[0] + '\"';
+}
 
-    if (count > data.trechos.length) {
+function geraDica() {
+    if (count >= currentSong.trechos.length) {
         alert('Dicas Esgotadas!');
     }
     else {
-        let novaDica = document.createElement('p');
-        document.getElementById('dicas').appendChild(novaDica);
-        novaDica.innerText = "\"" + dicas[count-1] + "\""
+        count += 1;
+        var novaDica = (document.createElement('p'));
+        $divDicas.appendChild(novaDica);
+        novaDica.innerText = '\"' + currentSong.trechos[count - 1] + '\"';
+        $marcaPontos.textContent = Number($marcaPontos.textContent) - 1;
     }
 }
 
-function verificaResposta(resposta) {
-    let chute = document.getElementById('resposta').value;
-    resposta = resposta.toLowerCase().trim();
-    chute = chute.toLowerCase().trim();
-    let result = document.getElementById('resultado');
-    result.hidden = false;
-
-    if (resposta == chute){
-        result.innerText = 'Correto';
-        document.getElementById('submit').hidden = true;
-        document.getElementById('gerarDicas').hidden = true;
+function verificaResposta() {
+    if (song.songs.length < 1) {
+        alert('Você Ganhou! Sua pontuação é : ' + Number($marcaPontos.textContent));
+    }
+    if ($inputResultado.value.toLowerCase().trim() == currentSong.titulo.toLowerCase().trim()) {
+        $outputResultado.innerText = 'CORRETO!';
+        $marcaPontos.textContent = Number($marcaPontos.textContent) + 5;
+        song.songs.splice(indice,1);
+        setTimeout(function(){reiniciaJogo();},1100);
     }
     else {
-        result.innerText = 'Incorreto';
+        $outputResultado.innerText = 'INCORRETO!';
+    }
+
+}
+
+function deleteDicas() {
+    var child = $divDicas.lastElementChild;
+    while(child){
+        $divDicas.removeChild(child);
+        child = $divDicas.lastElementChild;
     }
 }
 
-function iniciaJogo(data){
+function mudarMenu() {
     document.getElementById('main').hidden = false;
     document.getElementById('regras').hidden = true;
-    
-    let musica = data.titulo;
-
-    document.getElementById('dica1').innerText = "\"" + data.trechos[0] + "\"";
-    
-    document.getElementById('gerarDicas').addEventListener("click", function() {
-        mostrarDicas(data);
-    });
-
-    document.getElementById('submit').addEventListener("click", function() {
-        verificaResposta(musica);
-    });
-
 }
 
+function reiniciaJogo() {
+    $inputResultado.value = '';
+    count = 1;
+    $outputResultado.innerText = '';
+    deleteDicas();
+    geraInformacaoInicial();
+}
+
+
+$buttonSubmit.addEventListener('click', function() {
+    verificaResposta();
+});
+
+$inputResultado.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $buttonSubmit.click();
+    }
+})
+
+$buttonDica.addEventListener('click', function() {
+    geraDica()
+})
+
+getData();

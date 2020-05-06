@@ -4,12 +4,11 @@
   <head>
     <meta charset="utf-8">
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Adivinhe a Musica</title>
   </head>
 
-  <body>
-
+  <body> 
+      
       <header>
         <h1> Adivinhe a Música </h1>
         <p> Tente adivinhar a musica apartir de pequenos trechos dela</p>
@@ -18,29 +17,32 @@
       <div id='regras'>
         <p>Instruções:</p>
         <ul>
-          <li>Existe um limite de trechos da música dados</li>
+          <li>A cada acerto de música o jogador ganha 5 pontos</li>
+          <li>A cada dica pedida o jogado perde 1 ponto</li>
+          <li>Existe um limite de dicas dadas</li>
           <li>A entrada não é sensivel a letras maiúsculas ou minúsculas</li>
           <li>A entrada é sensivel à acentuação</li>
         </ul>
 
         <p>Vamos começar?</p>
-        <button onclick="getData()">Iniciar Jogo</button>
+        <button onclick='mudarMenu()'>Iniciar Jogo</button>
       </div>
 
-      <main id='main' hidden>
+      <div id='main' hidden>
+        
+        <p id='dica1'></p>
+         
         <div id='dicas'>
-          <p id='dica1'></p>
-          
         </div>
+
         <button id='gerarDicas'>Mostrar Dica</button>
         <input id='resposta'/>
         <button id='submit' >Responder</button>
-        <p id='resultado' hidden></p>
+        <p id='resultado'></p>
+        <p id='pontuacao'>Pontos: <span id='pontos'>0</span></p>
 
-      </main>
+      </div>
 
-    <script src="app.js"></script>
-
-    <footer>Made by Nayara Souza</footer>
+      <script src="app.js"></script>
   </body>
 </html>
