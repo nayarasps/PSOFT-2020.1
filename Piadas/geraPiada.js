@@ -1,4 +1,4 @@
-export let piada, resposta;
+export const piada, resposta;
 
 export async function getData(){
     fetch('https://raw.githubusercontent.com/nayarasps/PSOFT-2020.1/master/Piadas/piadas.json')
