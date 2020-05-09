@@ -1,7 +1,7 @@
 export let piada, resposta;
 
 export async function getData(){
-    fetch('https://raw.githubusercontent.com/EduardoNunes5/PSOFT/master/Joke/piadas.json')
+    fetch('https://raw.githubusercontent.com/nayarasps/PSOFT-2020.1/master/Piadas/piadas.json')
     .then(response => response.json())
     .then(data => piadaAleatoria(data.piadas))
     .catch(erro => console.error('Falha em conseguir informações', erro))
