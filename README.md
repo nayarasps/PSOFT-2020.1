@@ -15,3 +15,9 @@ Repositório contendo os exercícios da disciplina Projeto de Software-UFCG
   - O arquivo songs.json está na pasta, mas foi utilizado o fetch(via url do github) para obter seus dados
     - Versão HTML - [Link](https://nayarasps.github.io/PSOFT-2020.1/GuessSong/index.html)
     - Arquivos - [Link](https://github.com/nayarasps/PSOFT-2020.1/tree/master/GuessSong)
+    
+- Exercícios que gera piadas de um arquivo .json do servidor via fetch
+  - Foi utilizado modulos js
+  - O arquivo songs.json está na pasta, mas foi utilizado o fetch(via url do github) para obter seus dados
+      - Versão HTML - [Link](https://nayarasps.github.io/PSOFT-2020.1/Piadas/index.html)
+      - Arquivos - [Link](https://github.com/nayarasps/PSOFT-2020.1/tree/master/Piadas)
