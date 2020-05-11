@@ -1,4 +1,4 @@
-export let piada, resposta;
+export let piada;
 
 export async function getData(){
     fetch('https://raw.githubusercontent.com/nayarasps/PSOFT-2020.1/master/Piadas/piadas.json')
@@ -10,7 +10,6 @@ export async function getData(){
 function piadaAleatoria(piadas) {
     let index = Math.floor(Math.random() * piadas.length);
     piada = piadas[index].piada;
-    resposta = piadas[index].resposta;
 }
 
 getData();
