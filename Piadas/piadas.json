@@ -1,19 +1,18 @@
-{
-    "piadas": [{"piada": "Qual o jogo em que o Batman ensina a dar salto mortal?\nMortal Kombatman"},
-                {"piada": "Qual o game que só tem 1, 3, 5, 6, 7 e 9?\nAge of Impares"},
-                {"piada": "Qual o estado que solta hadouken?\nO Ryu de Janeiro"},
-                {"piada": "O que são vários pontinhos amarelos na praia?\nUm arrastão de Pac-Man"},
-                {"piada": "O que a polícia do Street Fighter faz?\nHonda"},
-                {"piada": "Qual o café preferido do gamer?\nNEScafé"},
-                {"piada": "Qual o pokémon que dá dicas de saúde?\nO Drowzee Varella"},
-                {"piada": "Mataram o Ash, qual o nome do filme?\nMewtwo matou um cara"},
-                {"piada": "Por que o Mario se dá bem na fase da água?\nPorque ele é marinho"},
-                {"piada": "Qual o game que está sempre gripado?\nO Overwatchim"},
-                {"piada": "Por que o Mario perdeu o processo para o Sonic?\nPorque a justiça é Sega"}
-                {"piada": "Por que o Mario foi ao psicólogo?\nPorque estava passando por uma fase difícil"},
-                {"piada": "Qual as opções do Google Maps na terra do Mario?\n1- A pé. 2- De Yoshi"},
-                {"piada": "Onde os X-Men tomam banho?\nNo X-Box"},
-                {"piada": "O que é um estudante de 6º ano de medicina mal intencionado?\nUm Residente Evil"},
-                {"piada": "Com que frequência o jogador de videogame vê mulher nua?\nDependendo do monitor, 60 Hertz"}
+{"piadas": [{"piada": "Qual o jogo em que o Batman ensina a dar salto mortal?\nMortal Kombatman"},
+            {"piada": "Qual o game que só tem 1, 3, 5, 6, 7 e 9?\nAge of Impares"},
+            {"piada": "Qual o estado que solta hadouken?\nO Ryu de Janeiro"},
+            {"piada": "O que são vários pontinhos amarelos na praia?\nUm arrastão de Pac-Man"},
+            {"piada": "O que a polícia do Street Fighter faz?\nHonda"},
+            {"piada": "Qual o café preferido do gamer?\nNEScafé"},
+            {"piada": "Qual o pokémon que dá dicas de saúde?\nO Drowzee Varella"},
+            {"piada": "Mataram o Ash, qual o nome do filme?\nMewtwo matou um cara"},
+            {"piada": "Por que o Mario se dá bem na fase da água?\nPorque ele é marinho"},
+            {"piada": "Qual o game que está sempre gripado?\nO Overwatchim"},
+            {"piada": "Por que o Mario perdeu o processo para o Sonic?\nPorque a justiça é Sega"},
+            {"piada": "Por que o Mario foi ao psicólogo?\nPorque estava passando por uma fase difícil"},
+            {"piada": "Qual as opções do Google Maps na terra do Mario?\n1- A pé. 2- De Yoshi"},
+            {"piada": "Onde os X-Men tomam banho?\nNo X-Box"},
+            {"piada": "O que é um estudante de 6º ano de medicina mal intencionado?\nUm Residente Evil"},
+            {"piada": "Com que frequência o jogador de videogame vê mulher nua?\nDependendo do monitor, 60 Hertz"}
     ]
 }
