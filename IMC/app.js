@@ -4,13 +4,14 @@ function calculaIMC() {
     let $inputPeso = document.getElementById('peso').value; 
 
     let imc = $inputPeso / ($inputAltura ** 2);
-
+    
     return imc;
 }
 
 function mostraResultado() {
-    let imc = calculaIMC();
-    document.getElementById('resultado').innerText = 'Seu IMC: ' + imc.toFixed(2);
+    let imc = calculaIMC().toFixed(1);
+    
+    document.getElementById('resultado').innerText = 'Seu IMC: ' + imc;
 
     if (imc < 18.5) {
         document.getElementById('classificacao').innerText = 'Magreza';
