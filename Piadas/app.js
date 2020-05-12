@@ -12,4 +12,4 @@ $piadaButton.addEventListener('click', function(){
     geraPiada();
 });
 
-setTimeout(function(){$piadaParagrafo.innerText = piada;}, 100);
+setTimeout(function(){geraPiada();}, 100);
