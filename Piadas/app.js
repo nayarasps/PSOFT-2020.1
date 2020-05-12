@@ -1,15 +1,15 @@
 import {getData, piada} from './geraPiada.js'
 
-let $piada = document.querySelector('#main #piada'),
-    $piadaButton = document.querySelector('#main #proximaPiada'),
+let $piadaParagrafo = document.querySelector('#main #piada'),
+    $piadaButton = document.querySelector('#main #proximaPiada');
 
-
-
-function geraPiada(piada){
+function geraPiada(){
     getData();
-    piadaP.innerHTML = piada;
+    $piadaParagrafo.innerText = piada;
 }
 
 $piadaButton.addEventListener('click', function(){
-    geraPiada($piada);
+    geraPiada();
 });
+
+geraPiada();
