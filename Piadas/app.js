@@ -12,4 +12,4 @@ $piadaButton.addEventListener('click', function(){
     geraPiada();
 });
 
-setTimeout(function(){geraPiada();}, 100);
+setTimeout(function(){geraPiada();}, 1000);
